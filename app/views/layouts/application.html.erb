@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsWatchList</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <div class="container mt-5 mx-3">
+    <p class="text-end"><%= link_to "My lists", lists_path %> <%= link_to "New List", new_list_path %></p>
+      <%= yield %>
+    </div>
+  </body>
+</html>
