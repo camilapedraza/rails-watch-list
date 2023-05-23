@@ -1,16 +1,17 @@
 <h2><%= @list.name %></h2>
 <div class="container my-3">
-  <ul>
-    <% @bookmarks.each do |bookmark| %>
-    <li><strong><%= bookmark.movie.title %></strong>
-      <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Remove #{bookmark.movie.title} from #{@list.name}?"} do %>
-        <i class="fa-regular fa-trash-can fa-xs"></i>
-      <% end %>
-    <br>Synopsis: <%= bookmark.movie.overview %>
-    <br>Rating: <%= bookmark.movie.rating %>
-    <br>Comment: <em>"<%= bookmark.comment %>"</em>
-    </li><br>
-    <% end %>
-  </ul>
+
+  <% @bookmarks.each do |bookmark| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= bookmark.movie.title %></h2>
+        <p><strong>Overview:</strong> <%= bookmark.movie.overview %></p>
+        <p><strong>Comment:</strong> <em>"<%= bookmark.comment %>"</em></p>
+        <p><strong>Rating:</strong> <%= bookmark.movie.rating %>
+      </div>
+    </div>
+    <br>
+  <% end %>
   <%= link_to "Add movie", new_list_bookmark_path(@list.id)  %>
 </div>
