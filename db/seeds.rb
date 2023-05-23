@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Cleaning Movie DB'
-Movie.destroy_all if Rails.env.development?
+Movie.destroy_all
+# if Rails.env.development?
 
 puts 'Creating strings'
 
