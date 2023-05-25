@@ -55,6 +55,9 @@ gem "font-awesome-sass", "~> 6.1"
 # gem "simple form"
 gem "simple_form"
 
+# gem "cloudinary" for image storage
+gem "cloudinary"
+
 # gen dotenv for security
 gem "dotenv-rails", groups: [:development, :test]
 

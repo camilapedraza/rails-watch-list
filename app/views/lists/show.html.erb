@@ -1,4 +1,6 @@
-<h2><%= @list.name %></h2>
+<div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.image.attached? ? cl_image_path(@list.image.key) : asset_path('list_background.jpg') %>)">
+    <h2><%= @list.name %></h2>
+</div>
 <div class="container my-3">
 
   <% @bookmarks.each do |bookmark| %>
